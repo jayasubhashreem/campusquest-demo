@@ -1,0 +1,118 @@
+:root {
+  --pink: #fde2ee;
+  --blue: #dbeafe;
+  --mint: #d9f7e8;
+  --yellow: #fff3c4;
+  --lavender: #ebe3ff;
+  --text: #4b4453;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, var(--pink), var(--lavender));
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.topbar {
+  text-align: center;
+  padding: 30px 10px 10px;
+}
+.topbar p { margin-top: 5px; letter-spacing: 3px; }
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 15px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  padding: 22px;
+  border-radius: 22px;
+  box-shadow: 0 8px 20px rgba(150, 120, 180, 0.15);
+}
+.card h2 { margin-bottom: 14px; }
+
+.xp-card { background: var(--blue); }
+.quests-card { background: var(--mint); }
+.bunk-card { background: var(--yellow); }
+.board-card { background: var(--lavender); }
+
+.bar {
+  height: 14px;
+  background: white;
+  border-radius: 20px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+.fill {
+  height: 100%;
+  width: 0%;
+  background: #f9a8d4;
+  border-radius: 20px;
+  transition: width 0.4s;
+}
+
+ul, ol { padding-left: 20px; }
+li { margin-bottom: 10px; }
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0 12px;
+  border: none;
+  border-radius: 12px;
+}
+
+button {
+  background: #f9a8d4;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover { background: #f472b6; }
+
+#bunk-result { margin-top: 12px; font-weight: 600; }
+.hidden { display: none !important; }
+
+.auth-card {
+  max-width: 380px;
+  margin: 20px auto;
+  background: var(--blue);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0 12px;
+  border: none;
+  border-radius: 12px;
+}
+
+.btn-row { display: flex; gap: 10px; }
+
+button.secondary {
+  background: #c4b5fd;
+}
+button.secondary:hover { background: #a78bfa; }
+
+#auth-msg { margin-top: 12px; font-weight: 600; }
+
+.welcome-row {
+  max-width: 900px;
+  margin: 10px auto 0;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

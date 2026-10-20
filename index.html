@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusQuest</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>🎮 CampusQuest</h1>
+    <p>Play. Move. Attend.</p>
+  </header>
+
+  <!-- LOGIN / SIGN UP -->
+  <section id="auth-section" class="card auth-card">
+    <h2>👋 Welcome, Player!</h2>
+    <input type="text" id="name" placeholder="Your name (for sign up)">
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password (min 6 characters)">
+    <div class="btn-row">
+      <button id="signup-btn">Sign Up</button>
+      <button id="login-btn" class="secondary">Login</button>
+    </div>
+    <p id="auth-msg"></p>
+  </section>
+
+  <!-- MAIN APP (shown after login) -->
+  <div id="app-section" class="hidden">
+    <div class="welcome-row">
+      <h3>Hi, <span id="user-name"></span> 👋</h3>
+      <button id="logout-btn" class="secondary">Logout</button>
+    </div>
+
+    <main class="container">
+      <section class="card xp-card">
+        <h2>✨ Your Progress</h2>
+        <p>Level <span id="level">1</span> • <span id="xp">0</span> XP</p>
+        <div class="bar"><div id="xp-fill" class="fill"></div></div>
+      </section>
+
+      <section class="card quests-card">
+        <h2>🏆 Daily Quests</h2>
+        <ul id="quest-list"></ul>
+      </section>
+
+      <section class="card bunk-card">
+        <h2>😎 BunkMeter</h2>
+        <label>Total classes so far</label>
+        <input type="number" id="total" placeholder="e.g. 80">
+        <label>Classes attended</label>
+        <input type="number" id="attended" placeholder="e.g. 70">
+        <button id="check-btn">Check</button>
+        <p id="bunk-result"></p>
+      </section>
+
+      <section class="card board-card">
+        <h2>📊 Live Leaderboard</h2>
+        <ol id="leaderboard"></ol>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
